@@ -1,16 +1,4 @@
-const students = [
-	{ id: 1, firstName: 'Guillaume', location: 'San Francisco' },
-	{ id: 2, firstName: 'James', location: 'Columbia' },
-	{ id: 5, firstName: 'Serena', location: 'San Francisco' }
-  ];
-
-
-  newGrades = [{ studentId: 5, grade: 97 }];
-
-  city = 'San Francisco';
-
-
-  function updateStudentGradeByCity(students, city, newGrades){
+export default function updateStudentGradeByCity(students, city, newGrades){
 
 	const filtered_students = students.filter(function(student){
 		return student.location == city; 
@@ -30,6 +18,3 @@ const students = [
 		}
 	})
   };
-
-
-  console.log(updateStudentGradeByCity(students, city, newGrades));
