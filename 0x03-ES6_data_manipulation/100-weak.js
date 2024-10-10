@@ -1,13 +1,13 @@
-const updateUniqueItems = (items) => {
-  if (!(items instanceof Map)) {
-    throw new Error('Cannot process');
-  }
-  for (const [k, v] of items.entries()) {
-    if (v === 1) {
-      items.set(k, 100);
-    }
-  }
-  return items;
-};
+export const weakMap = new WeakMap();
 
-export default updateUniqueItems;
+export const queryAPI = (endpoint) => {
+  if (weakMap.has(endpoint)) {
+    const endpointData = weakMap.get(endpoint);
+    if (endpointData >= 4) {
+      throw new Error('Endpoint load is high');
+    }
+    weakMap.set(endpoint, (endpointData + 1));
+  } else {
+    weakMap.set(endpoint, 1);
+  }
+};
