@@ -1,16 +1,16 @@
 const { expect } = require('chai');
 
 describe('Testing numbers', () => {
-  it('10 is equal to 10', () => {
-    expect(10 === 10).to.be.true;
+  it('1 is equal to 1', () => {
+    expect(1 === 1).to.be.true;
   });
 
   it('2 is equal to 2', () => {
     expect(2 === 2).to.be.true;
   });
 
-  it.skip('2 is equal to 3', () => {
-    expect(2 === 3).to.be.true;
+  it.skip('1 is equal to 3', () => {
+    expect(1 === 3).to.be.true;
   });
 
   it('3 is equal to 3', () => {
@@ -29,7 +29,7 @@ describe('Testing numbers', () => {
     expect(6 === 6).to.be.true;
   });
 
-  it('8 is equal to 8', () => {
-    expect(8 === 8).to.be.true;
+  it('7 is equal to 7', () => {
+    expect(7 === 7).to.be.true;
   });
 });
